@@ -8,9 +8,42 @@
 :root {
   --main: #ef4444;
   --light: #fefce8;
-  --grey-dark: #374161
-
+  --grey-dark: #374161;
+  --accent: #fbbf24;  
 }
+
+body.light-theme {
+  background-color: var(--light);
+  color: var(--grey-dark);
+}
+
+body.light-theme .text-white {
+  color: var(--grey-dark) !important;
+}
+
+body.light-theme .bg-white\/10 {
+  background-color: var(--accent) !important;
+}
+
+body.light-theme .bg-white\/20:hover {
+  background-color: var(--main) !important;
+  color: var(--light);
+}
+
+body.light-theme .border-white\/20 {
+  border-color: var(--grey-dark) !important;
+}
+
+body.light-theme .text-white\/60 {
+  color: rgba(55, 65, 81, 0.6) !important; 
+}
+
+body.light-theme input[type="range"]::-webkit-slider-track,
+body.light-theme input[type="range"]::-moz-range-track {
+  background: var(--grey-dark);
+}
+
+
 .logo {
   font-family: 'Bubbler One', sans-serif;
 }
