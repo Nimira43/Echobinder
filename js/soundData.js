@@ -80,3 +80,15 @@ export const sounds = [
     description: 'Wooden blocks',
   },
 ]
+
+export const defaultPresets = {
+  focus: {
+    name: 'Focus',
+    icon: 'fa-bullseye',
+    sounds: {
+      water: 30,
+      pub: 20,
+      wind: 10,
+    },
+  },
+}
