@@ -1,11 +1,11 @@
 export const sounds = [
   {
-    id: '',
-    name: '',
-    icon: '',
-    colour: '',
-    file: '',
-    description: '',
+    id: 'birds',
+    name: 'Birds',
+    icon: 'fa-solid fa-crow',
+    colour: 'grey-800',
+    file: 'birds.mp3',
+    description: 'Gentle bird song',
   },
   {
     id: '',
