@@ -14,7 +14,10 @@ export class Timer {
 
   complete() {}
 
-  updateDisplay() {}
+  updateDisplay() {
+    const minutes = Math.floor(this.remaining / 60)
+    const seconds = this.remaining % 60
 
-
+    if (this.onTick) this.onTick(minutes, seconds)
+  }
 }
