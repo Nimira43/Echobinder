@@ -33,7 +33,10 @@ export class SoundManager {
     }
   }
 
-  pauseSound(soundId) {}
+  pauseSound(soundId) {
+    const audio = this.audioElements.get(soundId)
+    if (audio && !audio.paused) audio.pause()
+  }
 
   setVolume(soundId, volume) {}
 
