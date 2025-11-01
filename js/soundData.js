@@ -72,11 +72,11 @@ export const sounds = [
     description: 'Howling wind',
   },
   {
-    id: '',
-    name: '',
-    icon: '',
+    id: 'wooden-blocks',
+    name: 'Wooden blocks',
+    icon: 'fa-cube',
     colour: 'grey-800',
     file: 'wooden-blocks.mp3',
-    description: '',
+    description: 'Wooden blocks',
   },
 ]
