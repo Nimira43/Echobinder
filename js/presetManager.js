@@ -12,7 +12,13 @@ export class PresetManager {
     return this.customPresets[presetId] || null
   }
 
-  saveCustomPresets() {}
+  saveCustomPresets() {
+    localStorage.setItem(
+      'ambientMixerPresets',
+      JSON.stringify(this.customPresets)
+    )
+  } 
+
   savePreset(name, soundStates) {}
   presetNameExtras(name) {}
   deletePreset(presetId) {}
