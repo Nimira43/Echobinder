@@ -82,13 +82,31 @@ export const sounds = [
 ]
 
 export const defaultPresets = {
-  focus: {
-    name: 'Focus',
+  active: {
+    name: 'Active',
     icon: 'fa-bullseye',
     sounds: {
-      water: 30,
-      pub: 20,
-      wind: 10,
+      thunder: 30,
+      wind: 20,
+      fire: 10,
+    },
+  },
+  relax: {
+    name: 'Relax',
+    icon: 'fa-couch',
+    sounds: {
+      traffic: 30,
+      waves: 20,
+      pub: 10,
+    },
+  },
+  sleep: {
+    name: 'Sleep',
+    icon: 'fa-bed',
+    sounds: {
+      birds: 40,
+      crickets: 30,
+      water: 15,
     },
   },
 }
