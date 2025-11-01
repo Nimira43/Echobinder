@@ -38,7 +38,17 @@ export class SoundManager {
     if (audio && !audio.paused) audio.pause()
   }
 
-  setVolume(soundId, volume) {}
+  setVolume(soundId, volume) {
+    const audio = this.audioElements.get(soundId)
+
+    if (!audio) {
+      console.error(`Sound ${soundId} not found`)
+      return false
+    } 
+        
+    audio.volume = volume / 100
+    return true
+  }
 
   playAll() {}
 
