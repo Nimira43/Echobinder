@@ -8,12 +8,12 @@ export const sounds = [
     description: 'Gentle bird song',
   },
   {
-    id: '',
-    name: '',
-    icon: '',
-    colour: '',
-    file: '',
-    description: '',
+    id: 'crickets',
+    name: 'Crickets',
+    icon: 'fa-solid fa-bug',
+    colour: 'grey-500',
+    file: 'crickets.mp3',
+    description: 'Crickets chirping',
   },
   {
     id: '',
