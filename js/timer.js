@@ -12,7 +12,11 @@ export class Timer {
 
   stop() {}
 
-  complete() {}
+  complete() {
+    this.stop()
+
+    if (this.onComplete) this.onComplete()
+  }
 
   updateDisplay() {
     const minutes = Math.floor(this.remaining / 60)
