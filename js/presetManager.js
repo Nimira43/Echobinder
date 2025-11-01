@@ -1,11 +1,13 @@
 export class PresetManager {
-  constructor() {}
+  constructor() {
+    this.customPresets = this.loadCustomPresets()
+  }
 
   loadCustomPresets() {}
-  loadPreset() {}
+  loadPreset(PresetId) {}
   saveCustomPresets() {}
-  savePreset() {}
-  presetNameExtras() {}
-  deletePreset() {}
+  savePreset(name, soundStates) {}
+  presetNameExtras(name) {}
+  deletePreset(presetId) {}
 
 }
