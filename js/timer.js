@@ -30,7 +30,17 @@ export class Timer {
     }, 1000)
   }
 
-  stop() {}
+  stop() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId)
+      this.intervalId = null
+    }
+
+    this.duration = 0
+    this.remaining = 0
+    this.isRunning = false
+    this.updateDisplay()
+  }
 
   complete() {
     this.stop()
