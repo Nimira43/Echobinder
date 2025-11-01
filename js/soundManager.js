@@ -50,7 +50,14 @@ export class SoundManager {
     return true
   }
 
-  playAll() {}
+  playAll() {
+    for (const [soundId, audio] of this.audioElements) {
+      if (audio.paused) {
+        audio.play()
+      }
+    }
+    this.isPlaying = true
+  }
 
   pauseAll() {}
 
