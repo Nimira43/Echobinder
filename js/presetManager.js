@@ -8,8 +8,10 @@ export class PresetManager {
     return stored ? JSON.stringify(stored) : {}
   }
 
+  loadPreset(PresetId) {
+    return this.customPresets[presetId] || null
+  }
 
-  loadPreset(PresetId) {}
   saveCustomPresets() {}
   savePreset(name, soundStates) {}
   presetNameExtras(name) {}
