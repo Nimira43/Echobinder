@@ -8,7 +8,27 @@ export class Timer {
     this.isRunning = false
   }
 
-  start() {}
+  start(minutes) {
+    if (minutes <= 0) {
+      this.stop()
+      return
+    }
+
+    this.duration = minutes * 60
+    this.remaining = this.duration
+    this.isRunning = true
+
+    if (this.intervalId) clearInterval (this.intervalId)
+
+    this.updateDisplay()
+    this.intervalId = setInterval(() => {
+      this.remaining--
+      this.updateDisplay()
+      if (this.remaining <= 0) {
+        this.complete()
+      }
+    }, 1000)
+  }
 
   stop() {}
 
