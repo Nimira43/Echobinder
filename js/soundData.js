@@ -24,12 +24,12 @@ export const sounds = [
     description: 'Fire raging',
   },
   {
-    id: '',
-    name: '',
-    icon: '',
-    colour: '',
-    file: '',
-    description: '',
+    id: 'pub',
+    name: 'Pub',
+    icon: 'fa-solid fa-glass-water',
+    colour: 'grey-800',
+    file: 'pub-800',
+    description: 'Crowded pub',
   },
   {
     id: '',
