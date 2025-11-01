@@ -4,13 +4,15 @@ export class SoundManager {
     this.isPlaying = false
   }
 
-  loadSound() {}
+  loadSound(soundId, filePath) {
 
-  playSound() {}
+  }
 
-  pauseSound() {}
+  playSound(soundId) {}
 
-  setVolume() {}
+  pauseSound(soundId) {}
+
+  setVolume(soundId, volume) {}
 
   playAll() {}
 
