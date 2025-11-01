@@ -3,7 +3,12 @@ export class PresetManager {
     this.customPresets = this.loadCustomPresets()
   }
 
-  loadCustomPresets() {}
+  loadCustomPresets() {
+    const stored = localStorage.getItem('ambientMixerPresets')
+    return stored ? JSON.stringify(stored) : {}
+  }
+
+
   loadPreset(PresetId) {}
   saveCustomPresets() {}
   savePreset(name, soundStates) {}
