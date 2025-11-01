@@ -13,13 +13,10 @@ export class Timer {
       this.stop()
       return
     }
-
     this.duration = minutes * 60
     this.remaining = this.duration
     this.isRunning = true
-
     if (this.intervalId) clearInterval (this.intervalId)
-
     this.updateDisplay()
     this.intervalId = setInterval(() => {
       this.remaining--
@@ -35,7 +32,6 @@ export class Timer {
       clearInterval(this.intervalId)
       this.intervalId = null
     }
-
     this.duration = 0
     this.remaining = 0
     this.isRunning = false
@@ -44,14 +40,12 @@ export class Timer {
 
   complete() {
     this.stop()
-
     if (this.onComplete) this.onComplete()
   }
 
   updateDisplay() {
     const minutes = Math.floor(this.remaining / 60)
     const seconds = this.remaining % 60
-
     if (this.onTick) this.onTick(minutes, seconds)
   }
 }
