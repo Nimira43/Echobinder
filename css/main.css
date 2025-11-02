@@ -98,6 +98,26 @@ body.dark-theme input[type="range"]::-moz-range-track {
   animation: dance 0.6s ease-in-out infinite;
 }
 
+.equaliser-bar:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.equaliser-bar:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.equaliser-bar:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.equaliser-bar:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.equaliser-bar:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
