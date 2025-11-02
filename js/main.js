@@ -31,8 +31,14 @@ class EchoBinder {
 
   setupEventListeners() {
     document.addEventListener('click', async (e) => {
-      
+
     })
+    
+    document.addEventListener('input', async (e) => {
+
+    })
+
+
 
   }
   loadAllSounds() {}
