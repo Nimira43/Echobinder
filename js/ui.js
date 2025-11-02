@@ -162,6 +162,15 @@ export class UI {
       const soundId = slider.dataset.sound
       this.updateVolumeDisplay(soundId, 0)
     })
+
+    const playButtons = document.querySelectorAll('.play-btn')
+    playButtons.forEach((btn) => {
+      const icon = btn.querySelector('i')
+      icon.classList.remove('fa-pause')
+      icon.classList.add('fa-play')
+    })
+
+    
   }
 
   showModal() {}
