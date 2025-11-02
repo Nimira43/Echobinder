@@ -158,7 +158,14 @@ export class UI {
 
   setActivePreset() {}
 
-  removeCustomPreset() {}
+  removeCustomPreset(presetId) {
+    const button = document.querySelector(`
+      .custome-preset-btn[data-preset="${presetId}"]
+    `)
+    if (button) {
+      button.remove()
+    }
+  }
 
   updateTimerDisplay(minutes, seconds) {
     if (this.timerDisplay) {
