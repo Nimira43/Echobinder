@@ -267,8 +267,21 @@ class EchoBinder {
     this.ui.updateMainPlayButton(anySoundsPlaying)
   }
 
+  resetAll() {
+    this.soundManager.stopAll()
+    this.masterVolume = 100
+    this.timer.stop()
 
-  resetAll() {}
+    if (this.ui.timerSelect) {
+      this.ui.timerSelect.value = '0'
+    }
+
+    this.ui.setActivePreset(null)
+    sounds.forEach((sound) => {
+      this.currentSoundState[sound.id] = 0 
+    })
+    this.ui.resetUI()
+  }
 
   loadPreset(presetKey, custome = false) {
 
