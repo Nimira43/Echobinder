@@ -95,7 +95,13 @@ export class UI {
     return button
   }
 
-  renderSoundCards() {}
+  renderSoundCards(sounds) {
+    this.soundCardsContainer.innerHTML = ''
+    sounds.forEach((sound) => {
+      const card = this.createSoundCard(sound)
+      this.soundsCardContainer.appendChild(card)
+    })
+  }
 
   updateSoundPlayButton () {}
 
