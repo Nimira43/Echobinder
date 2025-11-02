@@ -76,6 +76,12 @@ class EchoBinder {
       console.error(`Sound ${soundId} not found`)
       return false
     }
+
+    if (audio.paused) {
+      const card = document.querySelector(`[data-sound="${soundId}]`)
+      const slider = card.querySelector('.volume-slider')
+      let volume = parseInt(sliderValue)
+    }
   }
 
   toggleAllSounds() {
