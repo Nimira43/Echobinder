@@ -69,8 +69,13 @@ class EchoBinder {
     })
   }
   
-  toggleSound(soundId) {
+  async toggleSound(soundId) {
+    const audio = this.soundManager.audioElements.get(soundId)
 
+    if (!audio) {
+      console.error(`Sound ${soundId} not found`)
+      return false
+    }
   }
 
   toggleAllSounds() {
