@@ -254,8 +254,20 @@ class EchoBinder {
     }
   }
 
+  updateMainPlayButtonState() {
+    let anySoundsPlaying = false
 
-  updateMainPlayButtonState() {}
+    for (const [soundId, audio] of this.soundManager.audioElements) {
+      if (!audio.paused) {
+        anySoundsPlaying = true
+        break
+      }
+    }
+
+    
+  }
+
+
   resetAll() {}
 
   loadPreset(presetKey, custome = false) {
