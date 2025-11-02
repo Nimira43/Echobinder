@@ -91,6 +91,13 @@ body.dark-theme input[type="range"]::-moz-range-track {
   height: 30px;
 }
 
+.equaliser-bar {
+  width: 4px;
+  background-color: var(--main);
+  border-radius: 3px;
+  animation: dance 0.6s ease-in-out infinite;
+}
+
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
