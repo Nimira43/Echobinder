@@ -352,7 +352,7 @@ class EchoBinder {
     const presetId = this.presetManager.savePreset(name, this.currentSoundState)
     this.ui.addCustomPreset(name, presetId)
     this.ui.hideModal()
-    console.log(`Preset "${name}" daved successfully with ID: ${presetId}`)
+    console.log(`Preset "${name}" saved successfully with ID: ${presetId}`)
 
   }
 
@@ -363,7 +363,12 @@ class EchoBinder {
     }
   }
 
-  deleteCustomPreset(presetId) {}
+  deleteCustomPreset(presetId) {
+    if (this.presetManager.deletePreset(presetId)) {
+      this.ui.removeCustomPreset(presetId) 
+      console.log(`Preset ${presetId} deleted`)
+    }
+  }
 
   onTimerComplete() {} 
 }
