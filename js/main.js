@@ -216,6 +216,10 @@ class EchoBinder {
 
   setSoundVolume(soundId, volume) {
     this.currentSoundState[soundId] = volume
+    const effectiveVolume = (volume * this.masterVolume) / 100
+    const audio = this.soundManager.audioElements.get(soundId)
+
+    
   }
   
   setMasterVolume(volume) {
