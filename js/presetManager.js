@@ -27,7 +27,10 @@ export class PresetManager {
       sounds: {}
     }
 
-    
+      for (const [soundId, volume] of Object.entries(soundStates)) {
+        if (volume > 0) preset.sounds[soundId] = volume
+      }
+
   }
 
   presetNameExtras(name) {}
