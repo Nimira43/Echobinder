@@ -123,19 +123,11 @@ export class UI {
 
     if (card) {
       const volumeValue = card.querySelector('.volume-value')
-      if (volumeValue) {
-        volumeValue.textContent = volume
-      }
-
+      if (volumeValue) volumeValue.textContent = volume
       const volumeBarFill = card.querySelector('.volume-bar-fill')
-      if (volumeBarFill) {
-        volumeBarFill.style.width = `${volume}%`
-      }
-
+      if (volumeBarFill) volumeBarFill.style.width = `${volume}%`
       const slider = card.querySelector('.volume-slider')
-      if (slider) {
-        slider.value = volume
-      }
+      if (slider) slider.value = volume
     }
   }
 
@@ -167,10 +159,7 @@ export class UI {
     })
 
     const cards = document.querySelectorAll('.sound-card')
-    cards.forEach((card) => {
-      card.classList.remove('fa-playing')
-    })
-
+    cards.forEach((card) => card.classList.remove('fa-playing'))
     this.updateMainPlayButton(false)
     this.masterVolumeSlider.value = 100
     this.masterVolumeValue.textContent = '100%'
@@ -194,27 +183,25 @@ export class UI {
   }
 
   setActivePreset(presetKey) {
-    document.querySelectorAll('.preset-btn, .custom-preset-btn').forEach((btn) => { 
-      btn.classList.remove('preset-active')
-    })
+    document.querySelectorAll(
+      '.preset-btn, .custom-preset-btn'
+    ).forEach(
+      (btn) => btn.classList.remove('preset-active')
+    )
 
     const activeButton = document.querySelector(`
       .preset-btn[data-preset="${presetKey}"],
       .custom-preset-btn[data-preset="${presetKey}"]
     `)
 
-    if (activeButton) {
-      activeButton.classList.add('preset-active')
-    }
+    if (activeButton) activeButton.classList.add('preset-active')
   }
 
   removeCustomPreset(presetId) {
     const button = document.querySelector(`
       .custom-preset-btn[data-preset="${presetId}"]
     `)
-    if (button) {
-      button.remove()
-    }
+    if (button) button.remove()
   }
 
   updateTimerDisplay(minutes, seconds) {
@@ -228,6 +215,6 @@ export class UI {
       } else {
         this.timerDisplay.classList.add('hidden')
       }
-     }
+    }
   }
 }
