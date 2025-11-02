@@ -296,6 +296,13 @@ class EchoBinder {
       console.error(`Preset ${presetKey} not found`)
       return
     }
+
+    this.soundManager.stopAll()
+    sounds.forEach((sound) => {
+      this.currentSoundState[sound.id] = 0
+      this.ui.updateVolumeDisplay(sound.id, 0)
+      this.ui.updateSoundPlayButton(sound.id, false)
+    })
   }
 
   showSavePresetModal() {}
