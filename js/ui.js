@@ -78,22 +78,21 @@ export class UI {
   createCustomPresetButton(name, presetId) {
     const button = document.createElement('button')
     button.className = 'custom-preset-btn bg-yellow-100 bg-yellow-200 px-4 py-2 rounded-md hover-transition relative group'
-    
-
-
-{/* <i class="fa-solid fa-star mr-2 text-red-500"></i>
-
+    button.dataset.preset = presetId
+    button.innerHTML = `
+      <i class="fa-solid fa-star mr-2 text-red-500"></i>
+      ${name}
       <button
         type="button"
         id="resetAll"
-        class="delete-preset abosulte -top-2 -right-2  w-6 h-6 bg-yellow-100 rounded-md opacity-0 group-hover:opacity-100 hover-transition"
-        data-preset=""
+        class="delete-preset abosulte -top-2 -right-2  w-6 h-6 bg-red-500 rounded-md opacity-0 group-hover:opacity-100 hover-transition"
+        data-preset="${presetId}"
       >
-        <i class="fa-regular fa-circle-xmark text-xs text-red-500"></i>
+        <i class="fa-regular fa-circle-xmark text-xs text-red-white"></i>
         
-      </button> */}
-
-
+      </button>
+    `
+    return button
   }
 
   renderSoundCards() {}
