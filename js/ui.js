@@ -170,7 +170,14 @@ export class UI {
       icon.classList.add('fa-play')
     })
 
-    
+    const cards = document.querySelectorAll('.sound-card')
+    cards.forEach((card) => {
+      card.classList.remove('fa-playing')
+    })
+
+    this.updateMainPlayButton(false)
+    this.masterVolumeSlider.value = 100
+    this.masterVolumeValue.textContent = '100%'
   }
 
   showModal() {}
