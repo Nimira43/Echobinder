@@ -263,8 +263,8 @@ class EchoBinder {
         break
       }
     }
-
-    
+    this.soundManager.isPlaying = anySoundsPlaying
+    this.ui.updateMainPlayButton(anySoundsPlaying)
   }
 
 
