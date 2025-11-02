@@ -34,7 +34,10 @@ class EchoBinder {
 
   setupEventListeners() {
     document.addEventListener('click', async (e) => {
-
+      if (e.target.closet('.play-btn')) {
+        const soundId = e.target.closest('.play-btn').dataset.sound
+        await this.toggleSound(soundId)
+      }
     })
     
     document.addEventListener('input', async (e) => {
