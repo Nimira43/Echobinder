@@ -137,6 +137,15 @@ select {
   transform: scale(1.05);
 }
 
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--volume-bar);
+  border-top-color: var(--main);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
