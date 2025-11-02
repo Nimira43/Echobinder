@@ -238,7 +238,16 @@ class EchoBinder {
     this.applyMasterVolumeToAll()
   }
 
-  applyMasterVolumeToAll() {}
+  applyMasterVolumeToAll() {
+    for (const [soundId, audio] of this.soundManager.audioElements) {
+      if (!audioPaused) {
+        const card = document.querySelector(`[data-sound="${soundId}"]`)
+        const slider = card?.querySelector('.volume-slider')
+      }
+    }
+  }
+
+
   updateMainPlayButtonState() {}
   resetAll() {}
 
