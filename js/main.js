@@ -324,7 +324,18 @@ class EchoBinder {
     }
   }
 
-  showSavePresetModal() {}
+  showSavePresetModal() {
+    const hasActiveSounds = Object.values(this.currentSoundState).some((v) => v > 0)
+    
+    if (!hasActiveSounds) {
+      alert('No active sounds for preset')
+      return
+    }
+
+    this.ui.showModal()
+  }
+
+
   saveCurrentPreset() {}
 
   loadCustomPresetsUI() {
