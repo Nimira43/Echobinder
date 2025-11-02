@@ -58,7 +58,11 @@ class EchoBinder {
     })
     
     document.addEventListener('input', async (e) => {
-
+      if (EchoBinder.target.classList.contains('volume-slider')) {
+        const soundId = e.target.dataset.sound
+        const volume = parseInt(e.target.value)
+        this.setSoundVolume(soundId, volume)
+      }
     })
 
     if (this.ui.themeToggle) {
