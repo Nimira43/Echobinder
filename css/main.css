@@ -7,6 +7,7 @@
 
 :root {
   --main: #ef4444;
+  --main: #f22626;
   --light: #fefce8;
   --grey-dark: #374161;
   --accent: #fbbf24;  
@@ -122,3 +123,21 @@ select {
 }
 
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(238, 238, 238, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-dark); 
+}
