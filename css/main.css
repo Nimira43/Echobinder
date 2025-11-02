@@ -123,6 +123,10 @@ select {
   outline: none;
 }
 
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -133,6 +137,7 @@ select {
     transform: translateY(0);
   }
 }
+
 @keyframes shimmer {
   100% {
     left: 100%;
@@ -173,7 +178,6 @@ select {
     transform: rotate(360deg);
   }
 }
-
 
 .volume-bar {
   height: 4px;
