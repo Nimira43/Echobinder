@@ -75,8 +75,10 @@ export class UI {
     return card
   }
 
-  createCustomPresetButton() {
-
+  createCustomPresetButton(name, presetId) {
+    const button = document.createElement('button')
+    button.className = 'custom-preset-btn bg-yellow-100 bg-yellow-200 px-4 py-2 rounded-md hover-transition relative group'
+    
 
 
 {/* <i class="fa-solid fa-star mr-2 text-red-500"></i>
