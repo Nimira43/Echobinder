@@ -49,7 +49,14 @@ class EchoBinder {
   }
 
   loadAllSounds() {
+    sounds.forEach((sound) => {
+      const audioUrl = `sounds/${sound.file}`
+      const success = this.soundManager.loadSound(sound.id, audioUrl)
 
+      if (!success) {
+        console.warn(`Could not load sound: ${sound.name} from ${audioUrl}`)
+      }
+    })
   }
   
   toggleSound(soundId) {
