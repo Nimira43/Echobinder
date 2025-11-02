@@ -113,6 +113,16 @@ export class UI {
       if (volumeValue) {
         volumeValue.textContent = volume
       }
+
+      const volumeBarFill = card.querySelector('.volume-bar-fill')
+      if (volumeBarFill) {
+        volumeBarFill.style.width = `${volume}%`
+      }
+
+      const slider = card.querySelector('.volume-slider')
+      if (slider) {
+        slider.value = volume
+      }
     }
   }
 
