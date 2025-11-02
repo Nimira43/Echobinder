@@ -229,6 +229,13 @@ class EchoBinder {
   
   setMasterVolume(volume) {
     this.masterVolume = volume
+    const masterVolumeValue = document.getElementById('masterVolumeValue')
+
+    if (masterVolumeValue) {
+      masterVolumeValue.textContent = `${volume}%`
+    }
+
+    this.applyMasterVolumeToAll()
   }
 
   applyMasterVolumeToAll() {}
