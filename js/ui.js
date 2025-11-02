@@ -105,7 +105,16 @@ export class UI {
 
   updateSoundPlayButton () {}
 
-  updateVolumeDisplay() {}
+  updateVolumeDisplay(soundId, volume) {
+    const card = document.querySelector(`[data-sound="${soundId}"]`)
+
+    if (card) {
+      const volumeValue = card.querySelector('.volume-value')
+      if (volumeValue) {
+        volumeValue.textContent = volume
+      }
+    }
+  }
 
   updateMainPlayButton() {}
 
