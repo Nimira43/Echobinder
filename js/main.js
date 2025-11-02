@@ -88,6 +88,9 @@ class EchoBinder {
       }
 
       this.currentSoundState[soundId] = volume
+      this.soundManager.setVolume(soundId.volume)
+      await this.soundManager.playSound(soundId)
+      this.ui.updateSoundPlayButton(soundId, true)
     }
   }
 
