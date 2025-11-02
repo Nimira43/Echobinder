@@ -156,11 +156,24 @@ export class UI {
     this.customPresetsContainer.appendChild(button)
   }
 
-  setActivePreset() {}
+  setActivePreset(presetKey) {
+    document.querySelectorAll('.preset-btn, .custom-preset-btn').forEach((btn) => { 
+      btn.classList.remove('preset-active')
+    })
+
+    const activeButton = document.querySelector(`
+      .preset-btn[data-preset="${presetKey}"],
+      .custom-preset-btn[data-preset="${presetKey}"]
+    `)
+
+    if (activeButton) {
+      activeButton.classList.add('preset-active')
+    }
+  }
 
   removeCustomPreset(presetId) {
     const button = document.querySelector(`
-      .custome-preset-btn[data-preset="${presetId}"]
+      .custom-preset-btn[data-preset="${presetId}"]
     `)
     if (button) {
       button.remove()
