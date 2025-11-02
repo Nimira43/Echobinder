@@ -78,7 +78,7 @@ class EchoBinder {
 
   showSavePresetModal() {}
   saveCurrentPreset() {}
-  loadCustomPresersUI() {}
+  loadCustomPresetsUI() {}
 
   deleteCustomPreset(presetId) {}
 
