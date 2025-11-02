@@ -348,6 +348,12 @@ class EchoBinder {
       alert(`A preset ith the name ${name} already exists`)
       return
     }
+
+    const presetId = this.presetManager.savePreset(name, this.currentSoundState)
+    this.ui.addCustomPreset(name, presetId)
+    this.ui.hideModal()
+    console.log(`Preset "${name}" daved successfully with ID: ${presetId}`)
+
   }
 
   loadCustomPresetsUI() {
