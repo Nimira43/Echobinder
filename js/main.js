@@ -43,6 +43,9 @@ class EchoBinder {
   saveCurrentPreset() {}
   deleteCustomPreset() {}
   onTimerComplete() {} 
-
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const app = new EchoBinder()
+  app.init()
+})
