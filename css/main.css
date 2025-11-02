@@ -7,10 +7,11 @@
 
 :root {
   --main: #ef4444;
-  --main: #f22626;
+  --main-dark: #f22626;
   --light: #fefce8;
   --grey-dark: #374161;
   --accent: #fbbf24;  
+  --volume-bar: rgba(238, 238, 238, 0.1)
 }
 
 body.light-theme {
@@ -122,6 +123,14 @@ select {
   outline: none;
 }
 
+.volume-bar {
+  height: 4px;
+  background: var(--volume-bar);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -129,7 +138,7 @@ select {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(238, 238, 238, 0.1);
+  background: var(--volume-bar);
   border-radius: 3px;
 }
 
