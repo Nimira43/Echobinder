@@ -103,7 +103,14 @@ export class UI {
     })
   }
 
-  updateSoundPlayButton () {}
+  updateSoundPlayButton (soundId, isPlaying) {
+    const card = document.querySelector(`[data-sound="${soundId}"]`)
+
+    if (card) {
+      const playBtn = card.querySelector('.play-btn')
+      const icon = playBtn.querySelector('i')
+    }
+  }
 
   updateVolumeDisplay(soundId, volume) {
     const card = document.querySelector(`[data-sound="${soundId}"]`)
