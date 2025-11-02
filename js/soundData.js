@@ -42,7 +42,7 @@ export const sounds = [
   {
     id: 'traffic',
     name: 'Traffic',
-    icon: '',
+    icon: 'fa-car',
     colour: 'grey-800',
     file: 'traffic.mp3',
     description: 'Busy traffic',

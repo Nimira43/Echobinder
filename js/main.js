@@ -132,12 +132,6 @@ class EchoBinder {
         }
       })
     }
-    
-    if (this.ui.themeToggle) {
-      this.ui.themeToggle.addEventListener('click', () => {
-        this.ui.toggleTheme()
-      })
-    }
   }
 
   loadAllSounds() {
@@ -166,11 +160,11 @@ class EchoBinder {
     
       if (volume === 0) {
         volume = 50
-        this.ui.updateVolumeDisplay(soundId.volume)
+        this.ui.updateVolumeDisplay(soundId, volume)
       }
 
       this.currentSoundState[soundId] = volume
-      this.soundManager.setVolume(soundId.volume)
+      this.soundManager.setVolume(soundId, volume)
       await this.soundManager.playSound(soundId)
       this.ui.updateSoundPlayButton(soundId, true)
     } else {
@@ -224,7 +218,7 @@ class EchoBinder {
     }
 
     this.ui.updateVolumeDisplay(soundId, volume)
-    this.updateMainPlayButtonState
+    this.updateMainPlayButtonState()
   }
   
   setMasterVolume(volume) {
@@ -345,7 +339,7 @@ class EchoBinder {
     }
 
     if (this.presetManager.presetNameExtras(name)) {
-      alert(`A preset ith the name ${name} already exists`)
+      alert(`A preset with the name ${name} already exists`)
       return
     }
 

@@ -14,68 +14,6 @@
   --volume-bar: rgba(238, 238, 238, 0.1)
 }
 
-body.light-theme {
-  background-color: var(--light);
-  color: var(--grey-dark);
-}
-
-body.light-theme .text-white {
-  color: var(--grey-dark) !important;
-}
-
-body.light-theme .bg-white\/10 {
-  background-color: var(--accent) !important;
-}
-
-body.light-theme .bg-white\/20:hover {
-  background-color: var(--main) !important;
-  color: var(--light);
-}
-
-body.light-theme .border-white\/20 {
-  border-color: var(--grey-dark) !important;
-}
-
-body.light-theme .text-white\/60 {
-  color: rgba(55, 65, 81, 0.6) !important; 
-}
-
-body.light-theme input[type="range"]::-webkit-slider-track,
-body.light-theme input[type="range"]::-moz-range-track {
-  background: var(--grey-dark);
-}
-
-body.dark-theme {
-  background-color: var(--grey-dark);
-  color: var(--light);
-}
-
-body.dark-theme .text-white {
-  color: var(--light) !important;
-}
-
-body.dark-theme .bg-white\/10 {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-}
-
-body.dark-theme .bg-white\/20:hover {
-  background-color: var(--main) !important;
-  color: var(--light);
-}
-
-body.dark-theme .border-white\/20 {
-  border-color: var(--light) !important;
-}
-
-body.dark-theme .text-white\/60 {
-  color: rgba(254, 252, 232, 0.6) !important; /* yellow-50 at 60% */
-}
-
-body.dark-theme input[type="range"]::-webkit-slider-track,
-body.dark-theme input[type="range"]::-moz-range-track {
-  background: var(--light);
-}
-
 .logo {
   font-family: 'Bubbler One', sans-serif;
 }
@@ -101,7 +39,7 @@ body.dark-theme input[type="range"]::-moz-range-track {
 
 .sound-active::before {
   content: '';
-  position: active;
+  position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
@@ -197,15 +135,14 @@ select {
 }
 
 .preset-active {
-  /* background: var(--main) !important; */
-  background: limegreen !important; /* temp */
+  background: var(--main) !important;
   transform: scale(1.05);
 }
 
 .spinner {
   width: 40px;
   height: 40px;
-  border-radius: var(--volume-bar);
+  border: 3px solid var(--volume-bar);
   border-top-color: var(--main);
   border-radius: 50%;
   animation: spin 1s linear infinite;

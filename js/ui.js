@@ -9,7 +9,6 @@ export class UI {
     this.customPresetsContainer = null
     this.timerDisplay = null
     this.timerSelect = null
-    this.themeToggle = null
   }
 
   init() {
@@ -22,7 +21,6 @@ export class UI {
     this.customPresetsContainer = document.getElementById('customPresets')
     this.timerDisplay = document.getElementById('timerDisplay')
     this.timerSelect = document.getElementById('timerSelect')
-    this.themeToggle = document.getElementById('themeToggle')
   }
 
   createSoundCard(sound) {
@@ -84,12 +82,10 @@ export class UI {
       ${name}
       <button
         type="button"
-        id="resetAll"
-        class="delete-preset abosulte -top-2 -right-2  w-6 h-6 bg-red-500 rounded-md opacity-0 group-hover:opacity-100 hover-transition"
+        class="delete-preset absolute -top-2 -right-2  w-6 h-6 bg-red-500 rounded-md opacity-0 group-hover:opacity-100 hover-transition"
         data-preset="${presetId}"
       >
-        <i class="fa-regular fa-circle-xmark text-xs text-red-white"></i>
-        
+        <i class="fa-regular fa-circle-xmark text-xs text-white"></i>
       </button>
     `
     return button
@@ -233,18 +229,5 @@ export class UI {
         this.timerDisplay.classList.add('hidden')
       }
      }
-  }
-
-  toggleTheme() {
-    const body = document.body
-    const icon = this.themeToggle.querySelector('i')
-
-    if (body.classList.contains('light-theme')) {
-      body.classList.remove('light-theme')
-      icon.classList.replace('fa-moon', 'fa-sun')
-    } else {
-      body.classList.add('light-theme')
-      icon.classList.replace('fa-sun', 'fa-moon')
-    }
   }
 }
