@@ -193,6 +193,17 @@ class EchoBinder {
       for (const [soundId, audio] of this.soundManager.audioElements) {
         const card = document.querySelector(`[data-sound=${soundId}]`)
         const slider = card?.querySelector('.volume-slider')
+
+        if (slider) {
+          let volume = parseInt(slider.value)
+
+          if (volume === 0) {
+            volume = 50
+            slider.value = 50
+            this.ui.updateVolumeDisplay(soundId, 50)
+          }
+          this.currentSoundState[soundId] = volume
+        }
       }
     }
   }
