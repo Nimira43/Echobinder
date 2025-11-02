@@ -10,8 +10,22 @@ class EchoBinder {
     this.ui = new UI()
     this.presetManager = new PresetManager()
     this.timer = new Timer()
-    this.currentSoundDtate = {}
+    this.currentSoundState = {}
     this.masterVolume = 100
     this.isInitialised = false
+  }
+
+  init() {
+    try {
+      this.ui.init()
+      this.ui.renderSoundCards(sounds)
+      this.setupEventListeners()
+      this.loadCustomPresetsUI()
+      this.loadAllSounds()
+      sounds.forEach((sound) => this.currentSoundState[sound.id] = 0)
+      this.isInitialised =true
+    }  catch (error) {
+      console.error('Failed to initialise app: ', error)
+    }
   }
 }
