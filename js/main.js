@@ -93,6 +93,14 @@ class EchoBinder {
         this.showSavePresetModal()
       })
     }
+    
+    const confirmSaveButton = document.getElementById('confirmSave') 
+
+    if (confirmSaveButton) {
+      confirmSaveButton.addEventListener('click', () => {
+        this.saveCurrentPreset()
+      })
+    }
 
     if (this.ui.themeToggle) {
       this.ui.themeToggle.addEventListener('click', () => {
