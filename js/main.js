@@ -48,18 +48,40 @@ class EchoBinder {
     }
   }
 
-  loadAllSounds() {}
-  toggleSound() {}
-  toggleAllSounds() {}
-  setSoundVolume() {}
-  setMasterVolume() {}
+  loadAllSounds() {
+
+  }
+  
+  toggleSound(soundId) {
+
+  }
+
+  toggleAllSounds() {
+
+  }
+
+  setSoundVolume(soundId, volume) {
+    this.currentSoundState[soundId] = volume
+  }
+  
+  setMasterVolume(volume) {
+    this.masterVolume = volume
+  }
+
   applyMasterVolumeToAll() {}
   updateMainPlayButtonState() {}
   resetAll() {}
-  loadPreset() {}
+
+  loadPreset(presetKey, custome = false) {
+
+  }
+
   showSavePresetModal() {}
   saveCurrentPreset() {}
-  deleteCustomPreset() {}
+  loadCustomPresersUI() {}
+
+  deleteCustomPreset(presetId) {}
+
   onTimerComplete() {} 
 }
 
