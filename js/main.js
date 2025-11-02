@@ -38,6 +38,13 @@ class EchoBinder {
         const soundId = e.target.closest('.play-btn').dataset.sound
         await this.toggleSound(soundId)
       }
+      
+      if (e.target.closet('.delete-preset')) {
+        e.stopPropagation()
+        const presetId = e.target.closest('.delete-preset').dataset.preset
+        this.deleteCustomPreset(presetId)
+        return
+      }
     })
     
     document.addEventListener('input', async (e) => {
