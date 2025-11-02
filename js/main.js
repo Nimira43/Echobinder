@@ -65,6 +65,15 @@ class EchoBinder {
       }
     })
 
+    const masterVolumeSlider = document.getElementById('masterVolume') 
+
+    if (masterVolumeSlider) {
+      masterVolumeSlider.addEventListener('input', (e) => {
+        const volume = parseInt(e.target.value)
+        this.setMasterVolume(volume)
+      })
+    }
+
     if (this.ui.themeToggle) {
       this.ui.themeToggle.addEventListener('click', () => {
         this.ui.toggleTheme()
