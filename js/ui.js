@@ -180,9 +180,17 @@ export class UI {
     this.masterVolumeValue.textContent = '100%'
   }
 
-  showModal() {}
+  showModal() {
+    this.modal.classList.remove('hidden')
+    this.modal.classList.add('flex')
+    document.getElementById('presetName').focus()
+  }
 
-  hideModal() {}
+  hideModal() {
+    this.modal.classList.add('hidden')
+    this.modal.classList.remove('flex')
+    document.getElementById('presetName').value = ''
+  }
 
   addCustomPreset(name, presetId) {
     const button = this.createCustomPresetButton(name, presetId)
