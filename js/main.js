@@ -183,7 +183,13 @@ class EchoBinder {
   }
 
   toggleAllSounds() {
-
+    if (this.soundManager.isPlaying) {
+      this.soundManager.pauseAll()
+      this.ui.updateMainPlayButton(false)
+      sounds.forEach((sound) => {
+        this.ui.updateSoundPlayButton(sound.id, false)
+      })
+    }
   }
 
   setSoundVolume(soundId, volume) {
