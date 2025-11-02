@@ -5,10 +5,10 @@ export class PresetManager {
 
   loadCustomPresets() {
     const stored = localStorage.getItem('ambientMixerPresets')
-    return stored ? JSON.stringify(stored) : {}
+    return stored ? JSON.parse(stored) : {}
   }
 
-  loadPreset(PresetId) {
+  loadPreset(presetId) {
     return this.customPresets[presetId] || null
   }
 

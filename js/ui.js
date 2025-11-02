@@ -35,7 +35,7 @@ export class UI {
         <div class="flex items-center justify-between mb-4">
           <div class="flex items-center space-x-3">
             <div class="sound-icon-wrapper w-12 h-12 rounded-md text-red-500 bg-yellow-100 flex items-center justify-center">
-              <i class="fa-solid ${sound-icon}"></i>
+              <i class="fa-solid ${sound.icon}"></i>
             </div>
             <div>
               <h3 class="font-medium text-lg">${sound.name}</h3>
@@ -45,7 +45,7 @@ export class UI {
           <button
           type="button"
           class="play-btn w-10 h-10 text-red-500 bg-yellow-100 hover:bg-yellow-200 px-6 py-4 rounded-md hover-transition flex items-center justify-center"
-          data-sound="${sound-id}"
+          data-sound="${sound.id}"
         >
           <i class="fa-regular fa-circle-play text-sm"></i>
         </button>

@@ -28,7 +28,7 @@ export const sounds = [
     name: 'Pub',
     icon: 'fa-glass-water',
     colour: 'grey-800',
-    file: 'pub-800',
+    file: 'pub.mp3',
     description: 'Crowded pub',
   },
   {

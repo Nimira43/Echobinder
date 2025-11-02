@@ -34,31 +34,31 @@ class EchoBinder {
 
   setupEventListeners() {
     document.addEventListener('click', async (e) => {
-      if (e.target.closet('.play-btn')) {
+      if (e.target.closest('.play-btn')) {
         const soundId = e.target.closest('.play-btn').dataset.sound
         await this.toggleSound(soundId)
       }
       
-      if (e.target.closet('.delete-preset')) {
+      if (e.target.closest('.delete-preset')) {
         e.stopPropagation()
         const presetId = e.target.closest('.delete-preset').dataset.preset
         this.deleteCustomPreset(presetId)
         return
       }
       
-      if (e.target.closet('.preset-btn')) {
+      if (e.target.closest('.preset-btn')) {
         const presetKey = e.target.closest('.preset-btn').dataset.preset
         await this.loadPreset(presetKey)
       }
       
-      if (e.target.closet('.custom-preset-btn')) {
+      if (e.target.closest('.custom-preset-btn')) {
         const presetKey = e.target.closest('.custom-preset-btn').dataset.preset
         await this.loadPreset(presetKey, true)
       }
     })
     
     document.addEventListener('input', async (e) => {
-      if (EchoBinder.target.classList.contains('volume-slider')) {
+      if (e.target.classList.contains('volume-slider')) {
         const soundId = e.target.dataset.sound
         const volume = parseInt(e.target.value)
         this.setSoundVolume(soundId, volume)
@@ -160,7 +160,7 @@ class EchoBinder {
     }
 
     if (audio.paused) {
-      const card = document.querySelector(`[data-sound="${soundId}]`)
+      const card = document.querySelector(`[data-sound="${soundId}"]`)
       const slider = card.querySelector('.volume-slider')
       let volume = parseInt(slider.value)
     
@@ -240,7 +240,7 @@ class EchoBinder {
 
   applyMasterVolumeToAll() {
     for (const [soundId, audio] of this.soundManager.audioElements) {
-      if (!audioPaused) {
+      if (!audio.paused) {
         const card = document.querySelector(`[data-sound="${soundId}"]`)
         const slider = card?.querySelector('.volume-slider')
 
