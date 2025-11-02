@@ -6,7 +6,7 @@ export class UI {
     this.playPauseButton = null
     this.resetButton = null
     this.modal = null
-    this.customePresetsContainer = null
+    this.customPresetsContainer = null
     this.timerDisplay = null
     this.timerSelect = null
     this.themeToggle = null
@@ -19,7 +19,7 @@ export class UI {
     this.playPauseButton = document.getElementById('playPauseAll')
     this.resetButton = document.getElementById('resetAll')
     this.modal = document.getElementById('savePresetModal')
-    this.customePresetsContainer = document.getElementById('customPresets')
+    this.customPresetsContainer = document.getElementById('customPresets')
     this.timerDisplay = document.getElementById('timerDisplay')
     this.timerSelect = document.getElementById('timerSelect')
     this.themeToggle = document.getElementById('themeToggle')
@@ -99,7 +99,7 @@ export class UI {
     this.soundCardsContainer.innerHTML = ''
     sounds.forEach((sound) => {
       const card = this.createSoundCard(sound)
-      this.soundsCardContainer.appendChild(card)
+      this.soundCardsContainer.appendChild(card)
     })
   }
 
@@ -117,7 +117,7 @@ export class UI {
 
   addCustomPreset(name, presetId) {
     const button = this.createCustomPresetButton(name, presetId)
-    this.customePresetsContainer.appendChild(button)
+    this.customPresetsContainer.appendChild(button)
   }
 
   setActivePreset() {}
