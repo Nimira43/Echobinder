@@ -115,7 +115,10 @@ export class UI {
 
   hideModal() {}
 
-  addCustomPreset() {}
+  addCustomPreset(name, presetId) {
+    const button = this.createCustomPresetButton(name, presetId)
+    this.customePresetsContainer.appendChild(button)
+  }
 
   setActivePreset() {}
 
