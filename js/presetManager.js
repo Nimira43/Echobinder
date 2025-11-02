@@ -19,7 +19,17 @@ export class PresetManager {
     )
   } 
 
-  savePreset(name, soundStates) {}
+  savePreset(name, soundStates) {
+    const presetId = `custom-${Date.now()}`
+
+    const preset = {
+      name,
+      sounds: {}
+    }
+
+    
+  }
+
   presetNameExtras(name) {}
   deletePreset(presetId) {}
 
