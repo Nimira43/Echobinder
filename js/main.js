@@ -23,13 +23,18 @@ class EchoBinder {
       this.loadCustomPresetsUI()
       this.loadAllSounds()
       sounds.forEach((sound) => this.currentSoundState[sound.id] = 0)
-      this.isInitialised =true
+      this.isInitialised = true
     }  catch (error) {
       console.error('Failed to initialise app: ', error)
     }
   }
 
-  setupEventListeners() {}
+  setupEventListeners() {
+    document.addEventListener('click', async (e) => {
+      
+    })
+
+  }
   loadAllSounds() {}
   toggleSound() {}
   toggleAllSounds() {}
