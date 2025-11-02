@@ -41,6 +41,12 @@ export class PresetManager {
     return Object.values(this.customPresets).some((preset) => preset.name === name)
   }
   
-  deletePreset(presetId) {}
-
+  deletePreset(presetId) {
+    if (this.customPresets[presetId]) {
+      delete this.customPresets[presetId]
+      this.saveCustomPresets()
+      return true
+    }
+    return false
+  }
 }
