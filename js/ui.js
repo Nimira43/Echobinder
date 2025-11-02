@@ -155,7 +155,14 @@ export class UI {
     }
   }
 
-  resetUI() {}
+  resetUI() {
+    const sliders = document.querySelectorAll('.volume-slider')
+    sliders.forEach((slider) => {
+      slider.value = 0
+      const soundId = slider.dataset.sound
+      this.updateVolumeDisplay(soundId, 0)
+    })
+  }
 
   showModal() {}
 
