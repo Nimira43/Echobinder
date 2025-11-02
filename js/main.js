@@ -243,6 +243,13 @@ class EchoBinder {
       if (!audioPaused) {
         const card = document.querySelector(`[data-sound="${soundId}"]`)
         const slider = card?.querySelector('.volume-slider')
+
+        if (slider) {
+          const individualVolume = parseInt(slider.value)
+          const effectiveVolume = (individualVolume * this.masterVolume) / 100
+
+          audio.volume = effectiveVolume / 100
+        }
       }
     }
   }
