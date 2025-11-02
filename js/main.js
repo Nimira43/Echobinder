@@ -28,4 +28,21 @@ class EchoBinder {
       console.error('Failed to initialise app: ', error)
     }
   }
+
+  setupEventListeners() {}
+  loadAllSounds() {}
+  toggleSound() {}
+  toggleAllSounds() {}
+  setSoundVolume() {}
+  setMasterVolume() {}
+  applyMasterVolumeToAll() {}
+  updateMainPlayButtonState() {}
+  resetAll() {}
+  loadPreset() {}
+  showSavePresetModal() {}
+  saveCurrentPreset() {}
+  deleteCustomPreset() {}
+  onTimerComplete() {} 
+
 }
+
