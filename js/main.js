@@ -303,6 +303,14 @@ class EchoBinder {
       this.ui.updateVolumeDisplay(sound.id, 0)
       this.ui.updateSoundPlayButton(sound.id, false)
     })
+
+    for (const [soundId, volume] of Object.entries(preset.sounds)) {
+      this.currentSoundState[soundId] = volume
+      this.ui.updateVolumeDisplay(soundId, volume)
+      const effectiveVolume = (volume * this.masterVolume) / 100
+      const audio = this.soundManager.audioElements.get(soundId)
+
+    }
   }
 
   showSavePresetModal() {}
