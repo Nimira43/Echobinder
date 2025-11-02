@@ -189,6 +189,11 @@ class EchoBinder {
       sounds.forEach((sound) => {
         this.ui.updateSoundPlayButton(sound.id, false)
       })
+    } else {
+      for (const [soundId, audio] of this.soundManager.audioElements) {
+        const card = document.querySelector(`[data-sound=${soundId}]`)
+        const slider = card?.querySelector('.volume-slider')
+      }
     }
   }
 
