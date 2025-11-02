@@ -162,7 +162,7 @@ class EchoBinder {
     if (audio.paused) {
       const card = document.querySelector(`[data-sound="${soundId}]`)
       const slider = card.querySelector('.volume-slider')
-      let volume = parseInt(sliderValue)
+      let volume = parseInt(slider.value)
     
       if (volume === 0) {
         volume = 50
@@ -173,7 +173,13 @@ class EchoBinder {
       this.soundManager.setVolume(soundId.volume)
       await this.soundManager.playSound(soundId)
       this.ui.updateSoundPlayButton(soundId, true)
+    } else {
+      this.soundManager.pauseSound(soundId)
+      this.currentSoundState[soundId] = 0
+      this.ui.updateSoundPlayButton(soundId, false)
+      this.currentSoundState[soundId] = 0
     }
+    this.updateMainPlayButtonState()
   }
 
   toggleAllSounds() {
