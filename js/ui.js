@@ -109,6 +109,16 @@ export class UI {
     if (card) {
       const playBtn = card.querySelector('.play-btn')
       const icon = playBtn.querySelector('i')
+    
+      if (isPlaying) {
+        icon.classList.remove('fa-play')
+        icon.classList.add('fa-pause')
+        icon.classList.add('playing')
+      } else {
+        icon.classList.remove('fa-pause')
+        icon.classList.add('fa-play')
+        icon.classList.remove('playing')
+      }
     }
   }
 
