@@ -131,6 +131,12 @@ select {
   animation: modalEnter 0.3s ease-out;
 }
 
+.preset-active {
+  /* background: var(--main) !important; */
+  background: limegreen !important; /* temp */
+  transform: scale(1.05);
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
