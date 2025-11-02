@@ -117,6 +117,21 @@ class EchoBinder {
         }
       })
     }
+
+    const timerSelect = document.getElementById('timerSelect') 
+
+    if (timerSelect) {
+      timerSelect.addEventListener('change', (e) => {
+        const minutes = parseInt(e.target.value)
+
+        if (minutes > 0) {
+          this.timer.start(minutes)
+          console.log(`Timer started for ${minutes} minutes`)
+        } else {
+          this.timer.stop()
+        }
+      })
+    }
     
     if (this.ui.themeToggle) {
       this.ui.themeToggle.addEventListener('click', () => {
