@@ -84,6 +84,13 @@ body.dark-theme input[type="range"]::-moz-range-track {
   transition: all 0.5s ease-in-out;
 }
 
+.sound-card {
+  animation: fadeInUp 0.5s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
 .equaliser {
   display: flex;
   align-items: flex-end;
