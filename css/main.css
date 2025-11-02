@@ -141,34 +141,36 @@ select {
 
 @keyframes dance {
   0%, 100% {
-
+    height: 5px;
   }
   100% {
-    
+    height: 100%;
   }
 }
 
 @keyframes pulse {
   0%, 100% {
-
+    opacity: 1;
   }
   100% {
-    
+    opacity: 0.7
   }
 }
 
 @keyframes modalEnter {
   from {
-
+    opacity: 0;
+    transform: scale(0.9);
   }
   to {
-    
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
 @keyframes spin {
   to {
-    
+    transform: rotate(360deg);
   }
 }
 
