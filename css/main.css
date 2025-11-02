@@ -123,12 +123,52 @@ select {
   outline: none;
 }
 
-@keyframes fadeInUp {}
-@keyframes shimmer {}
-@keyframes dance {}
-@keyframes pulse {}
-@keyframes modalEnter {}
-@keyframes spin {}
+@keyframes fadeInUp {
+  from {
+
+  }
+  to {
+
+  }
+}
+@keyframes shimmer {
+  100% {
+    
+  }
+}
+
+@keyframes dance {
+  0%, 100% {
+
+  }
+  100% {
+    
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+
+  }
+  100% {
+    
+  }
+}
+
+@keyframes modalEnter {
+  from {
+
+  }
+  to {
+    
+  }
+}
+
+@keyframes spin {
+  to {
+    
+  }
+}
 
 
 .volume-bar {
