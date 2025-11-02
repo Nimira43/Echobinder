@@ -78,7 +78,13 @@ class EchoBinder {
 
   showSavePresetModal() {}
   saveCurrentPreset() {}
-  loadCustomPresetsUI() {}
+
+  loadCustomPresetsUI() {
+    const customPresets = this.presetManager.customPresets
+    for (const [presetId, preset] of Object.entries(customPresets)) {
+      this.ui.addCustomPreset(preset.name, presetId)
+    }
+  }
 
   deleteCustomPreset(presetId) {}
 
