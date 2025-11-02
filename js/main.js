@@ -315,7 +315,12 @@ class EchoBinder {
         audio.play()
         this.ui.updateSoundPlayButton(soundId, true)
       }
+    }
+    this.soundManager.isPlaying = true
+    this.ui.updateMainPlayButton(true)
 
+    if (presetKey) {
+      this.ui.setActivePreset(presetKey)
     }
   }
 
