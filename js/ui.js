@@ -75,7 +75,24 @@ export class UI {
     return card
   }
 
-  createCustomPresetButton() {}
+  createCustomPresetButton() {
+
+
+
+{/* <i class="fa-solid fa-star mr-2 text-red-500"></i>
+
+      <button
+        type="button"
+        id="resetAll"
+        class="delete-preset abosulte -top-2 -right-2  w-6 h-6 bg-yellow-100 rounded-md opacity-0 group-hover:opacity-100 hover-transition"
+        data-preset=""
+      >
+        <i class="fa-regular fa-circle-xmark text-xs text-red-500"></i>
+        
+      </button> */}
+
+
+  }
 
   renderSoundCards() {}
 
