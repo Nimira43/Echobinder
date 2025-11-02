@@ -143,7 +143,17 @@ export class UI {
     }
   }
 
-  updateMainPlayButton() {}
+  updateMainPlayButton(isPlaying) {
+    const icon = this.playPauseButton.querySelector('i')
+
+    if (isPlaying) {
+      icon.classList.remove('fa-play')
+      icon.classList.add('fa-pause')
+    } else {
+      icon.classList.remove('fa-pause')
+      icon.classList.add('fa-play')
+    }
+  }
 
   resetUI() {}
 
