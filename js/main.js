@@ -9,7 +9,10 @@ class EchoBinder {
     this.soundManager = new SoundManager()
     this.ui = new UI()
     this.presetManager = new PresetManager()
-    this.timer = new Timer()
+    this.timer = new Timer(
+      () => this.onTimerComplete(),
+      (minutes, seconds) => this.ui.updateTimerDisplay(minutes, seconds)
+    )
     this.currentSoundState = {}
     this.masterVolume = 100
     this.isInitialised = false
@@ -38,9 +41,13 @@ class EchoBinder {
 
     })
 
-
-
+    if (this.ui.themeToggle) {
+      this.ui.themeToggle.addEventListener('click', () => {
+        this.ui.toggleTheme()
+      })
+    }
   }
+
   loadAllSounds() {}
   toggleSound() {}
   toggleAllSounds() {}
