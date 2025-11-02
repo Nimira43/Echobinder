@@ -25,8 +25,10 @@ export class UI {
     this.themeToggle = document.getElementById('themeToggle')
   }
 
-  createSoundCard() {
-
+  createSoundCard(sound) {
+    const card = document.createElement('div')
+    card.className = 'sound-card bg-yellow-100 rounded-2xl p-6 relative overflow-hidden'
+    card.dataset.sound = sound.id
 
 
 {/* <div class="flex flex-col h-full">
