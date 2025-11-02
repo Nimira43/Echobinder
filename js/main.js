@@ -101,6 +101,14 @@ class EchoBinder {
         this.saveCurrentPreset()
       })
     }
+    
+    const cancelSaveButton = document.getElementById('cancelSave') 
+
+    if (cancelSaveButton) {
+      cancelSaveButton.addEventListener('click', () => {
+        this.ui.hideModal()
+      })
+    }
 
     if (this.ui.themeToggle) {
       this.ui.themeToggle.addEventListener('click', () => {
