@@ -123,6 +123,14 @@ select {
   outline: none;
 }
 
+@keyframes fadeInUp {}
+@keyframes shimmer {}
+@keyframes dance {}
+@keyframes pulse {}
+@keyframes modalEnter {}
+@keyframes spin {}
+
+
 .volume-bar {
   height: 4px;
   background: var(--volume-bar);
