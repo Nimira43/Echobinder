@@ -84,6 +84,13 @@ body.dark-theme input[type="range"]::-moz-range-track {
   transition: all 0.5s ease-in-out;
 }
 
+.equaliser {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 30px;
+}
+
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
