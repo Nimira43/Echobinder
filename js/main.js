@@ -86,6 +86,14 @@ class EchoBinder {
       })
     }
 
+    const saveButton = document.getElementById('savePreset') 
+
+    if (saveButton) {
+      saveButton.addEventListener('click', () => {
+        this.showSavePresetModal()
+      })
+    }
+
     if (this.ui.themeToggle) {
       this.ui.themeToggle.addEventListener('click', () => {
         this.ui.toggleTheme()
