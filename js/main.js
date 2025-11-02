@@ -219,7 +219,12 @@ class EchoBinder {
     const effectiveVolume = (volume * this.masterVolume) / 100
     const audio = this.soundManager.audioElements.get(soundId)
 
-    
+    if (audio) {
+      audio.volume = effectiveVolume / 100
+    }
+
+    this.ui.updateVolumeDisplay(soundId, volume)
+    this.updateMainPlayButtonState
   }
   
   setMasterVolume(volume) {
