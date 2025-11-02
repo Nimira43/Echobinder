@@ -335,8 +335,20 @@ class EchoBinder {
     this.ui.showModal()
   }
 
+  saveCurrentPreset() {
+    const nameInput = document.getElementById('presetName')
+    const name = nameInput.value.trim()
 
-  saveCurrentPreset() {}
+    if (!name) {
+      alert('Please enter a preset name')
+      return
+    }
+
+    if (this.presetManager.presetNameExtras(name)) {
+      alert(`A preset ith the name ${name} already exists`)
+      return
+    }
+  }
 
   loadCustomPresetsUI() {
     const customPresets = this.presetManager.customPresets
