@@ -283,8 +283,19 @@ class EchoBinder {
     this.ui.resetUI()
   }
 
-  loadPreset(presetKey, custome = false) {
+  loadPreset(presetKey, custom = false) {
+    let preset
 
+    if (custom) {
+      preset = this.presetManager.loadPreset(presetKey)
+    } else {
+      preset = defaultPresets[presetKey]
+    }
+
+    if (!preset) {
+      console.error(`Preset ${presetKey} not found`)
+      return
+    }
   }
 
   showSavePresetModal() {}
