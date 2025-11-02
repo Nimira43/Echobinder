@@ -110,6 +110,14 @@ class EchoBinder {
       })
     }
 
+    if (this.ui.modal) {
+      this.ui.modal.addEventListener('click', (e) => {
+        if (e.target === this.ui.modal) {
+          this.ui.hideModal()
+        }
+      })
+    }
+    
     if (this.ui.themeToggle) {
       this.ui.themeToggle.addEventListener('click', () => {
         this.ui.toggleTheme()
