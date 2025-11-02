@@ -79,6 +79,12 @@ class EchoBinder {
         this.toggleAllSounds()
       })
     }
+    
+    if (this.ui.resetButton) {
+      this.ui.resetButton.addEventListener('click', () => {
+        this.resetAll()
+      })
+    }
 
     if (this.ui.themeToggle) {
       this.ui.themeToggle.addEventListener('click', () => {
