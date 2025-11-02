@@ -74,6 +74,12 @@ class EchoBinder {
       })
     }
 
+    if (this.ui.playPauseButton) {
+      this.ui.playPauseButton.addEventListener('click', () => {
+        this.toggleAllSounds()
+      })
+    }
+
     if (this.ui.themeToggle) {
       this.ui.themeToggle.addEventListener('click', () => {
         this.ui.toggleTheme()
