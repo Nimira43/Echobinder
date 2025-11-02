@@ -49,8 +49,11 @@ class EchoBinder {
       if (e.target.closet('.preset-btn')) {
         const presetKey = e.target.closest('.preset-btn').dataset.preset
         await this.loadPreset(presetKey)
-        return
+      }
       
+      if (e.target.closet('.custom-preset-btn')) {
+        const presetKey = e.target.closest('.custom-preset-btn').dataset.preset
+        await this.loadPreset(presetKey, true)
       }
     })
     
